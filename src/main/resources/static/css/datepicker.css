@@ -1,0 +1,15 @@
+.hasDatepicker {
+    width: 80px;
+}
+
+p {
+   font-weight: bold;
+}
+
+p input {
+    padding: 3px;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}

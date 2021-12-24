@@ -1,0 +1,8 @@
+#divBody {
+    position: fixed;
+    left: 0;
+    top: 75px;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,19 @@
+<jqassistant-plugin xmlns="http://schema.jqassistant.org/plugin/v1.8"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://schema.jqassistant.org/plugin/v1.8 https://schema.jqassistant.org/plugin/jqassistant-plugin-v1.8.xsd"
+                    name="EKB Plugins">
+    <description>Provides a scanners</description>
+    <model>
+        <class>com.sgh.scan.scanners.ekb.restcontroller.RestControllerDescriptor</class>
+        <class>com.sgh.scan.scanners.ekb.restcontroller.EndpointDescriptor</class>
+        <class>com.sgh.scan.scanners.ekb.service.FileServiceDescriptor</class>
+        <class>com.sgh.scan.scanners.ekb.service.EndpointCallerDescriptor</class>
+        <class>com.sgh.scan.scanners.ekb.service.RemoteServiceDescriptor</class>
+        <class>com.sgh.scan.scanners.ekb.service.SpecialCaseDescriptor</class>
+        <class>com.sgh.scan.entities.RepositoryInfoDescriptor</class>
+    </model>
+    <scanner>
+        <class>com.sgh.scan.scanners.ekb.restcontroller.RestControllerScanPlugin</class>
+        <class>com.sgh.scan.scanners.ekb.service.ServiceScanPlugin</class>
+    </scanner>
+</jqassistant-plugin>
