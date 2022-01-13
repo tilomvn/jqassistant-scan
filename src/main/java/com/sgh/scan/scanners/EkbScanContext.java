@@ -30,8 +30,8 @@ class EkbScanContext {
 
         log.info("Clone Repository");
         var gitCloner = GitCloner.getInstance();
-        gitCloner.cloneRepository(new RepositoryInfo(repositoryInfoDescriptor.getBranch(), repositoryInfoDescriptor.getRepoUrl(),
-                new SshInfo(repositoryInfoDescriptor.getSshPrivateKeyPath(), repositoryInfoDescriptor.getPassPhase())));
+        //gitCloner.cloneRepository(/*new RepositoryInfo(repositoryInfoDescriptor.getBranch(), repositoryInfoDescriptor.getRepoUrl(),
+        //        new SshInfo(repositoryInfoDescriptor.getSshPrivateKeyPath(), repositoryInfoDescriptor.getPassPhase()))*/null);
 
         log.info("End Preparing EKB Scan Context");
         return new EkbScanInfo(repositoryInfoDescriptor.getCloneDirectory());

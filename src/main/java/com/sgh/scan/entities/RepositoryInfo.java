@@ -2,6 +2,7 @@ package com.sgh.scan.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import java.nio.file.Path;
@@ -11,6 +12,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Builder
 @Getter
 public class RepositoryInfo {
 
@@ -31,7 +33,7 @@ public class RepositoryInfo {
     @JsonIgnore
     String rootDir = System.getProperty("user.dir") + "/project-base/repositories/";
 
-    public RepositoryInfo(String branch, String repoUrl, TransportType transportType) {
+    /*public RepositoryInfo(String branch, String repoUrl, TransportType transportType) {
         this.branch = branch;
         this.repoUrl = repoUrl;
         this.transportType = transportType;
@@ -51,7 +53,7 @@ public class RepositoryInfo {
         this.cloneDirectoryPath = getCloneDirectoryPath(this.repoUrl);
         this.sshInfo = sshInfo;
         this.transportType = TransportType.SSH;
-    }
+    }*/
 
     private String getCloneDirectoryPath(String repoUrl) {
         Matcher matcher = Pattern.compile(".*\\/([^'\\/]*).git").matcher(repoUrl);
@@ -70,8 +72,8 @@ public class RepositoryInfo {
 
     public enum TransportType { HTTP, SSH }
 
+    @Builder
     @Getter
-    @AllArgsConstructor
     public static class UsernamePasswordInfo {
         String userName;
         String password;

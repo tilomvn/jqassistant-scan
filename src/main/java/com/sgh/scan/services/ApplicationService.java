@@ -27,8 +27,8 @@ public class ApplicationService {
     }
 
     public RepositoryInfo addRepositoryInfo(RepositoryInfoRequest repositoryInfoRequest) throws Exception {
-        var repositoryInfo = new RepositoryInfo(repositoryInfoRequest.getBranch(), repositoryInfoRequest.getRepoUrl(),
-                RepositoryInfo.TransportType.valueOf(repositoryInfoRequest.getAuthenticationType()));
+        RepositoryInfo repositoryInfo = /*new RepositoryInfo(repositoryInfoRequest.getBranch(), repositoryInfoRequest.getRepoUrl(),
+                RepositoryInfo.TransportType.valueOf(repositoryInfoRequest.getAuthenticationType()))*/null;
 
         var repositoryInfoDescriptor =
                 applicationRepository.findByRepoUrlAndBranch(repositoryInfoRequest.getRepoUrl(), repositoryInfoRequest.getBranch());
