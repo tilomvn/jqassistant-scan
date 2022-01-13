@@ -14,3 +14,4 @@
 * Sample query for CS -> RM : MATCH (n:Service)-[r]->(n1)-[r1]->(n2) RETURN *
 * Database directory: /target/jqassistant
 * Manually Run Ekb Scan: make request to api: http://localhost:8088/api/scan/ekb
+* Git sample: https://golb.hplar.ch/2019/08/git-with-jgit.html
